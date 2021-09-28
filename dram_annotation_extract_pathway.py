@@ -34,6 +34,6 @@ annotations = pd.read_csv(annotations_path, sep='\t', index_col=0)
 coverage_df = make_etc_coverage_df(module_df, annotations, groupby_column=ANNOTATION_GROUP_COLUMN)
 coverage_df = coverage_df.drop(["complex", "complex_module_name"], axis=1)
 
-coverage_df.to_csv(output_path, sep = OUTPUT_DELIM)
+coverage_df.to_csv(output_path, sep = OUTPUT_DELIM, index=False)
 
 
